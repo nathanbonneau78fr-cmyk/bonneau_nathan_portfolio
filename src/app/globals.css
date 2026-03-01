@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #eef2f7;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, #070d18 0%, #0b1220 40%, #070d18 100%);
+  color: var(--text);
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid rgba(30, 167, 168, 0.75);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(30, 167, 168, 0.35);
+}
