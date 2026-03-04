@@ -11,11 +11,12 @@ export default function SyntheseTable({
   competences: Competence[];
 }) {
   return (
-    <div className="overflow-x-auto rounded-xl border border-ink-800/70 bg-ink-900/20 shadow-soft">
-      <table className="min-w-[820px] w-full border-collapse text-left text-sm">
+    <div className="glow-rgb-synthese overflow-x-auto rounded-xl border border-ink-800/70 bg-ink-900/20 shadow-soft">
+      <table className="w-full min-w-[820px] border-collapse text-left text-sm">
         <caption className="sr-only">
-          Tableau de synthèse : réalisations et compétences mobilisées
+          Tableau de synthèse : réalisations et compétences
         </caption>
+
         <thead className="bg-ink-900/35 text-ink-100">
           <tr>
             <th className="px-4 py-3">Réalisation</th>
@@ -26,6 +27,7 @@ export default function SyntheseTable({
             ))}
           </tr>
         </thead>
+
         <tbody>
           {realisations.map((r) => {
             const slug = toSlug(r.titre);
@@ -39,19 +41,13 @@ export default function SyntheseTable({
                     {r.titre}
                   </Link>
                 </td>
-                {competences.map((c) => {
-                  const ok = r.competencesMobilisees.includes(c.code);
-                  return (
-                    <td key={c.code} className="px-4 py-3">
-                      <span
-                        className={ok ? "text-accent-500 font-bold" : "text-ink-600"}
-                        aria-label={ok ? "Compétence mobilisée" : "Non mobilisée"}
-                      >
-                        {ok ? "✔" : "—"}
-                      </span>
-                    </td>
-                  );
-                })}
+
+                {/* Les compétences ne sont plus stockées dans les données "realisations" */}
+                {competences.map((c) => (
+                  <td key={c.code} className="px-4 py-3 text-ink-600">
+                    —
+                  </td>
+                ))}
               </tr>
             );
           })}

@@ -6,11 +6,11 @@ import { profile } from "@/data/profile";
 export default function HomePage() {
   return (
     <Section
-      title="Portfolio E4 — BTS SIO (SISR)"
-      subtitle="Présentation structurée et professionnelle de mes réalisations en alternance, alignée sur le bloc « Support et mise à disposition de services informatiques »."
+      title="Bienvenue sur mon portfolio"
+      subtitle="Étudiant en BTS SIO SISR à H3 campus de Poissy, je développe mes compétences en administration système, sécurité réseau et infrastructure informatique."
     >
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-xl border border-ink-800/70 bg-ink-900/20 p-6 shadow-soft">
+        <div className="glow-rgb-about rounded-xl border border-ink-800/70 bg-ink-900/20 p-6 shadow-soft">
           <p className="text-sm text-ink-300">Identité</p>
           <h2 className="mt-2 text-xl font-semibold text-ink-50">
             {profile.nom}
@@ -44,10 +44,10 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-ink-800/70 bg-ink-900/20 p-6 shadow-soft">
+        <div className="glow-rgb-about rounded-xl border border-ink-800/70 bg-ink-900/20 p-6 shadow-soft">
           <p className="text-sm text-ink-300">Contexte</p>
           <h2 className="mt-2 text-xl font-semibold text-ink-50">
-            Alternance — RTE
+            Alternance chez RTE
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-ink-200">
             {profile.alternance}
@@ -60,11 +60,8 @@ export default function HomePage() {
             <Link className="hover:underline text-ink-100" href="/competences">
               → Compétences
             </Link>
-            <Link
-              className="hover:underline text-ink-100"
-              href="/developpement-professionnel"
-            >
-              → Développement professionnel
+            <Link className="hover:underline text-ink-100" href="/veille">
+              → Veille technologique
             </Link>
           </div>
         </div>

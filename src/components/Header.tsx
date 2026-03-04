@@ -8,7 +8,7 @@ const links = [
   { href: "/competences", label: "Compétences" },
   { href: "/realisations", label: "Réalisations" },
   { href: "/tableau-synthese", label: "Tableau de synthèse" },
-  { href: "/developpement-professionnel", label: "Dév. professionnel" },
+  { href: "/veille", label: "Veille" }, // /veille
   { href: "/contact", label: "Contact" }
 ];
 
@@ -18,15 +18,43 @@ export default function Header() {
       <Container className="py-3">
         <div className="flex items-center justify-between gap-4">
           <div className="min-w-0">
-            <Link href="/" className="block">
-              <span className="block truncate text-sm font-semibold text-ink-50">
-                {profile.nom}
-              </span>
-              <span className="block truncate text-xs text-ink-300">
-                Portfolio E4 — BTS SIO SISR
-              </span>
-            </Link>
-          </div>
+  <Link
+    href="/"
+    className="group flex items-center gap-3 rounded-md"
+    aria-label="Retour à l’accueil"
+    title="Accueil"
+  >
+    {/* Logo Accueil */}
+    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-ink-700/70 bg-ink-900/30 shadow-soft">
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        className="h-5 w-5 text-accent-500"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M3 10.5L12 3l9 7.5" />
+        <path d="M5 10v10h14V10" />
+        <path d="M9 20v-6h6v6" />
+      </svg>
+    </span>
+
+    {/* Texte (Nom + indication Accueil) */}
+    <span className="min-w-0">
+      <span className="block truncate text-sm font-semibold text-ink-50">
+        {profile.nom}
+      </span>
+      <span className="mt-0.5 inline-flex items-center gap-2 truncate text-xs text-ink-300">
+        <span className="group-hover:underline">Portfolio</span>
+        <span className="text-ink-600"></span>
+        <span className="truncate"></span>
+      </span>
+    </span>
+  </Link>
+</div>
 
           <nav className="hidden md:block" aria-label="Navigation principale">
             <ul className="flex flex-wrap items-center gap-3 text-sm text-ink-200">

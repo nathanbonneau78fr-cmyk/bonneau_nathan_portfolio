@@ -20,8 +20,27 @@ export default {
           600: "#148a8a"
         }
       },
+
       boxShadow: {
         soft: "0 10px 30px rgba(0,0,0,.08)"
+      },
+
+      // ✅ AJOUT ICI (dans extend)
+      keyframes: {
+        floatSlow: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" }
+        },
+        shimmer: {
+          "0%": { transform: "translateX(-30%)" },
+          "100%": { transform: "translateX(130%)" }
+        }
+      },
+
+      // ✅ AJOUT ICI (objet, pas tableau)
+      animation: {
+        floatSlow: "floatSlow 10s ease-in-out infinite",
+        shimmer: "shimmer 2.8s linear infinite"
       }
     }
   },

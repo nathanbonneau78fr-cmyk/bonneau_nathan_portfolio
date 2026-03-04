@@ -25,3 +25,522 @@ summary:focus-visible {
 ::selection {
   background: rgba(30, 167, 168, 0.35);
 }
+/* ===== RGB glow autour des cadres ===== */
+@keyframes rgbGlowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* ===== RGB glow : contour uniquement ===== */
+@keyframes rgbGlowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glow-rgb {
+  position: relative;
+  isolation: isolate;
+}
+
+/* contour net */
+.glow-rgb::before,
+.glow-rgb::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(
+    130deg,
+    rgba(255, 0, 102, 0.9),
+    rgba(255, 170, 0, 0.8),
+    rgba(0, 255, 234, 0.85),
+    rgba(124, 58, 237, 0.9),
+    rgba(255, 0, 102, 0.9)
+  );
+  background-size: 300% 300%;
+  animation: rgbGlowShift 8s linear infinite;
+}
+
+/* liseré visible sur le bord uniquement */
+.glow-rgb::before {
+  inset: -1px;
+  padding: 1px;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.95;
+}
+
+/* halo externe léger */
+.glow-rgb::after {
+  inset: -4px;
+  padding: 2px;
+  z-index: -1;
+  filter: blur(10px);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.35;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.glow-rgb:hover::after {
+  opacity: 0.55;
+  filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-rgb::before,
+  .glow-rgb::after {
+    animation: none;
+  }
+}
+/* ===== Variante RGB pour la page À propos (bleu / cyan / violet) ===== */
+.glow-rgb-about {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-rgb-about::before,
+.glow-rgb-about::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(
+    130deg,
+    rgba(59, 130, 246, 0.9),
+    rgba(6, 182, 212, 0.85),
+    rgba(14, 165, 233, 0.8),
+    rgba(139, 92, 246, 0.9),
+    rgba(59, 130, 246, 0.9)
+  );
+  background-size: 300% 300%;
+  animation: rgbGlowShift 8s linear infinite;
+}
+
+/* contour */
+.glow-rgb-about::before {
+  inset: -1px;
+  padding: 1px;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.95;
+}
+
+/* halo externe */
+.glow-rgb-about::after {
+  inset: -4px;
+  padding: 2px;
+  z-index: -1;
+  filter: blur(10px);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.35;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.glow-rgb-about:hover::after {
+  opacity: 0.55;
+  filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-rgb-about::before,
+  .glow-rgb-about::after {
+    animation: none;
+  }
+}
+/* ===== Variante RGB pour la page Compétences (vert / cyan / turquoise) ===== */
+.glow-rgb-competences {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-rgb-competences::before,
+.glow-rgb-competences::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(
+    130deg,
+    rgba(34, 197, 94, 0.9),
+    rgba(16, 185, 129, 0.85),
+    rgba(6, 182, 212, 0.8),
+    rgba(20, 184, 166, 0.9),
+    rgba(34, 197, 94, 0.9)
+  );
+  background-size: 300% 300%;
+  animation: rgbGlowShift 8s linear infinite;
+}
+
+/* contour */
+.glow-rgb-competences::before {
+  inset: -1px;
+  padding: 1px;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.95;
+}
+
+/* halo externe */
+.glow-rgb-competences::after {
+  inset: -4px;
+  padding: 2px;
+  z-index: -1;
+  filter: blur(10px);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.35;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.glow-rgb-competences:hover::after {
+  opacity: 0.55;
+  filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-rgb-competences::before,
+  .glow-rgb-competences::after {
+    animation: none;
+  }
+}
+/* ===== Variante RGB pour Réalisations (violet / fuchsia / rose) ===== */
+.glow-rgb-realisations {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-rgb-realisations::before,
+.glow-rgb-realisations::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(
+    130deg,
+    rgba(168, 85, 247, 0.95),
+    rgba(217, 70, 239, 0.85),
+    rgba(244, 63, 94, 0.85),
+    rgba(99, 102, 241, 0.9),
+    rgba(168, 85, 247, 0.95)
+  );
+  background-size: 300% 300%;
+  animation: rgbGlowShift 8s linear infinite;
+}
+
+/* contour */
+.glow-rgb-realisations::before {
+  inset: -1px;
+  padding: 1px;
+
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.95;
+}
+
+/* halo externe */
+.glow-rgb-realisations::after {
+  inset: -4px;
+  padding: 2px;
+  z-index: -1;
+  filter: blur(10px);
+
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.35;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.glow-rgb-realisations:hover::after {
+  opacity: 0.55;
+  filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-rgb-realisations::before,
+  .glow-rgb-realisations::after {
+    animation: none;
+  }
+}
+/* ===== Variante RGB pour Tableau de synthèse (ambre / jaune / orange) ===== */
+.glow-rgb-synthese {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-rgb-synthese::before,
+.glow-rgb-synthese::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(
+    130deg,
+    rgba(245, 158, 11, 0.95),  /* amber */
+    rgba(251, 191, 36, 0.9),   /* yellow */
+    rgba(249, 115, 22, 0.9),   /* orange */
+    rgba(239, 68, 68, 0.85),   /* red */
+    rgba(245, 158, 11, 0.95)
+  );
+  background-size: 300% 300%;
+  animation: rgbGlowShift 8s linear infinite;
+}
+
+/* contour */
+.glow-rgb-synthese::before {
+  inset: -1px;
+  padding: 1px;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.95;
+}
+
+/* halo externe */
+.glow-rgb-synthese::after {
+  inset: -4px;
+  padding: 2px;
+  z-index: -1;
+  filter: blur(10px);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.35;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.glow-rgb-synthese:hover::after {
+  opacity: 0.55;
+  filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-rgb-synthese::before,
+  .glow-rgb-synthese::after {
+    animation: none;
+  }
+}
+/* ===== Variante RGB pour Veille (magenta / violet / indigo / bleu) ===== */
+.glow-rgb-veille {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-rgb-veille::before,
+.glow-rgb-veille::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(
+    130deg,
+    rgba(236, 72, 153, 0.95),  /* pink */
+    rgba(168, 85, 247, 0.92),  /* violet */
+    rgba(99, 102, 241, 0.90),  /* indigo */
+    rgba(59, 130, 246, 0.90),  /* blue */
+    rgba(236, 72, 153, 0.95)
+  );
+  background-size: 300% 300%;
+  animation: rgbGlowShift 8s linear infinite;
+}
+
+/* contour */
+.glow-rgb-veille::before {
+  inset: -1px;
+  padding: 1px;
+
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.95;
+}
+
+/* halo externe */
+.glow-rgb-veille::after {
+  inset: -4px;
+  padding: 2px;
+  z-index: -1;
+  filter: blur(10px);
+
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.35;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.glow-rgb-veille:hover::after {
+  opacity: 0.55;
+  filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-rgb-veille::before,
+  .glow-rgb-veille::after {
+    animation: none;
+  }
+}
+/* ===== Variante RGB pour Contact (CMY : cyan / magenta / jaune) ===== */
+.glow-rgb-contact {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-rgb-contact::before,
+.glow-rgb-contact::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(
+    130deg,
+    rgba(255, 0, 221, 0.95),  /* magenta */
+    rgba(0, 255, 234, 0.90),  /* cyan */
+    rgba(255, 235, 59, 0.90), /* jaune */
+    rgba(99, 102, 241, 0.88), /* indigo léger */
+    rgba(255, 0, 221, 0.95)
+  );
+  background-size: 300% 300%;
+  animation: rgbGlowShift 8s linear infinite;
+}
+
+/* contour */
+.glow-rgb-contact::before {
+  inset: -1px;
+  padding: 1px;
+
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.95;
+}
+
+/* halo externe */
+.glow-rgb-contact::after {
+  inset: -4px;
+  padding: 2px;
+  z-index: -1;
+  filter: blur(10px);
+
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  opacity: 0.35;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.glow-rgb-contact:hover::after {
+  opacity: 0.55;
+  filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-rgb-contact::before,
+  .glow-rgb-contact::after {
+    animation: none;
+  }
+}
