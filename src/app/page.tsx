@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Section from "@/components/Section";
-import Badge from "@/components/Badge";
 import { profile } from "@/data/profile";
 
 export default function HomePage() {
@@ -10,22 +9,18 @@ export default function HomePage() {
       subtitle="Étudiant en BTS SIO SISR à H3 campus de Poissy, je développe mes compétences en administration système, sécurité réseau et infrastructure informatique."
     >
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="glow-rgb-about rounded-xl border border-ink-800/70 bg-ink-900/20 p-6 shadow-soft">
-          <p className="text-sm text-ink-300">Identité</p>
-          <h2 className="mt-2 text-xl font-semibold text-ink-50">
-            {profile.nom}
-          </h2>
-          <p className="mt-2 text-sm text-ink-200">{profile.titre}</p>
-          <p className="mt-4 text-sm leading-relaxed text-ink-200">
-            <span className="font-semibold text-ink-100">Objectif :</span>{" "}
-            {profile.objectif}
-          </p>
+        <div className="glow-rgb-about flex min-h-[285px] flex-col rounded-xl border border-ink-800/70 bg-ink-900/20 p-6 shadow-soft">
+          <div className="flex-1">
+            <p className="text-sm text-ink-300">Identité</p>
 
-          <div className="mt-5 flex flex-wrap gap-2">
-            <Badge>Support</Badge>
-            <Badge>Infrastructure</Badge>
-            <Badge>Réseau</Badge>
-            <Badge>Services aux utilisateurs</Badge>
+            <h2 className="mt-2 text-xl font-semibold text-ink-50">
+              {profile.nom}
+            </h2>
+
+            <p className="mt-6 text-sm leading-relaxed text-ink-200">
+              <span className="font-semibold text-ink-100">Objectif :</span>{" "}
+              {profile.objectif}
+            </p>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -44,23 +39,25 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="glow-rgb-about rounded-xl border border-ink-800/70 bg-ink-900/20 p-6 shadow-soft">
-          <p className="text-sm text-ink-300">Contexte</p>
-          <h2 className="mt-2 text-xl font-semibold text-ink-50">
-            Alternance chez RTE
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-ink-200">
-            {profile.alternance}
-          </p>
+        <div className="glow-rgb-about flex min-h-[285px] flex-col rounded-xl border border-ink-800/70 bg-ink-900/20 p-6 shadow-soft">
+          <div className="flex-1">
+            <p className="text-sm text-ink-300">Contexte</p>
+            <h2 className="mt-2 text-xl font-semibold text-ink-50">
+              Alternance chez RTE
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-200">
+              {profile.alternance}
+            </p>
+          </div>
 
           <div className="mt-6 grid gap-3">
-            <Link className="hover:underline text-ink-100" href="/a-propos">
+            <Link className="text-ink-100 hover:underline" href="/a-propos">
               → À propos
             </Link>
-            <Link className="hover:underline text-ink-100" href="/competences">
+            <Link className="text-ink-100 hover:underline" href="/competences">
               → Compétences
             </Link>
-            <Link className="hover:underline text-ink-100" href="/veille">
+            <Link className="text-ink-100 hover:underline" href="/veille">
               → Veille technologique
             </Link>
           </div>
