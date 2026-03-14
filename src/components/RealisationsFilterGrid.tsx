@@ -55,7 +55,7 @@ export default function RealisationsFilterGrid({
               Parcours de professionnalisation
             </p>
             <p className="mt-1 text-sm text-ink-100">
-              Les fiches ci-dessous présentent mes réalisations en alternance.
+              Les fiches ci-dessous présentent une sélection de mes réalisations en formation et en contexte professionnel.
             </p>
           </div>
 
