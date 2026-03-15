@@ -140,9 +140,9 @@ export const realisations: Realisation[] = [
     href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Déploiement-et-sécurisation-d’un-serveur-de-fichiers/tp4-ssh-serveur-fichiers-livrable.pdf"
   },
   {
-  label: "Virtualisation",
-  href: "/preuves/e5/formation/virtualisation/virtualisation.pdf"
-}
+    label: "Virtualisation - solutions telles que VMware, Hyper-V, KVM",
+    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Déploiement-et-sécurisation-d’un-serveur-de-fichiers/virtualisation-vmware-hyperv-kvm.pdf"
+  }
 ]
   },
   {
@@ -371,9 +371,9 @@ export const realisations: Realisation[] = [
     href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Virtualisation-de-serveurs-et-services-(création-et-gestion-de-machines-virtuelles)/atelier-installation-ordinateur-virtuel.pdf"
   },
   {
-    label: "Virtualisation",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Virtualisation-de-serveurs-et-services-(création-et-gestion-de-machines-virtuelles)/virtualisation.pdf"
-  }
+  label: "Virtualisation",
+  href: "/preuves/e5/formation/virtualisation/virtualisation.pdf"
+}
 ]
   },
   {
