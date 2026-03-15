@@ -276,54 +276,78 @@ export const realisations: Realisation[] = [
     image: "/realisations/reseau-local-vlan-adressage-ip.png",
     imageAlt: "Réseau local avec switch, VLAN et adresses IP",
     competences: ["C1", "C5"],
-    preuvesPdfAssociees: [
+   preuvesPdfAssociees: [
   {
     label: "Lab - Identifying IPv4 Addresses",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/lab-identifying-ipv4-addresses.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/lab-identifying-ipv4-addresses.pdf"
+    )
   },
   {
     label: "Lab - Configuration de base d’un switch Cisco",
-  href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/lab-configuration-base-switch-cisco.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/lab-configuration-base-switch-cisco.pdf"
+    )
   },
   {
     label: "Lab - Configuring a Switch Management",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/lab-configuring-switch-management.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/lab-configuring-switch-management.pdf"
+    )
   },
   {
     label: "Adressage IP - Base",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/adressage-ip-base.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/adressage-ip-base.pdf"
+    )
   },
   {
     label: "Bloc 2 - Couche Réseau IP - Partie 1",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/bloc2-couche-reseau-ip-partie1.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/bloc2-couche-reseau-ip-partie1.pdf"
+    )
   },
   {
     label: "Bloc 2 - Introduction au routage IP - Partie 3",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/bloc2-introduction-routage-ip-partie3.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/bloc2-introduction-routage-ip-partie3.pdf"
+    )
   },
   {
-  label: "Bloc 2 - Les bases de l’adressage IPv4",
-  href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/bloc2-bases-adressage-ipv4.pdf"
-},
+    label: "Bloc 2 - Les bases de l’adressage IPv4",
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/bloc2-bases-adressage-ipv4.pdf"
+    )
+  },
   {
     label: "Bloc 2 - Les réseaux locaux",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/bloc2-reseaux-locaux.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/bloc2-reseaux-locaux.pdf"
+    )
   },
   {
     label: "Bloc 2 - VLAN",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/bloc2-vlan.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/bloc2-vlan.pdf"
+    )
   },
   {
     label: "Modèle OSI",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/modele-osi.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/modele-osi.pdf"
+    )
   },
   {
     label: "Protocoles et services réseau",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/protocoles-services-reseau.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/protocoles-services-reseau.pdf"
+    )
   },
   {
     label: "Topologies et typologies des réseaux",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Création et administration d’un réseau local (adressage IP, VLAN, tests de connectivité)/topologies-typologies-reseaux.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/topologies-typologies-reseaux.pdf"
+    )
   }
 ]
   },
